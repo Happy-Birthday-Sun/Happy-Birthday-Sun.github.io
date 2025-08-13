@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>致我最爱的孙 - 生日快乐</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#121212',
+            darker: '#0A0A0A',
+            gold: '#D4AF37',
+            'gold-light': '#F8EFD4',
+            'dark-gray': '#1E1E1E',
+            'medium-gray': '#2D2D2D'
+          },
+          fontFamily: {
+            elegant: ['Playfair Display', 'serif'],
+            modern: ['Montserrat', 'sans-serif']
+          },
+          backgroundImage: {
+            'texture': "url('https://picsum.photos/id/175/1000/1000')",
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .text-shadow-gold {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      }
+      .ornament-border {
+        position: relative;
+      }
+      .ornament-border::before, .ornament-border::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        top: 50%;
+      }
+      .ornament-border::before {
+        left: -70px;
+      }
+      .ornament-border::after {
+        right: -70px;
+      }
+      .gift-box {
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .gift-box:hover {
+        transform: translateY(-10px);
+      }
+      .ribbon {
+        position: relative;
+        background: #D4AF37;
+        color: #0A0A0A;
+        padding: 0.5em 2em;
+        margin-bottom: 2rem;
+      }
+      .ribbon::before, .ribbon::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        border: 15px solid #B8860B;
+      }
+      .ribbon::before {
+        left: 0;
+        border-right-color: transparent;
+      }
+      .ribbon::after {
+        right: 0;
+        border-left-color: transparent;
+      }
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-white min-h-screen overflow-x-hidden">
+<!-- 装饰性背景纹饰 -->
+<div class="fixed inset-0 bg-texture opacity-5 bg-cover bg-center pointer-events-none"></div>
+
+<!-- 顶部装饰线条 -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+
+<!-- 主内容容器 -->
+<div class="container mx-auto px-4 py-12 relative z-10">
+  <!-- 标题区域 -->
+  <header class="text-center mb-16 scroll-reveal">
+    <div class="w-20 h-20 mx-auto mb-8 relative">
+      <div class="absolute inset-0 border-2 border-gold rounded-full animate-spin-slow opacity-70" style="animation: spin 20s linear infinite;"></div>
+      <div class="absolute inset-2 border border-gold/50 rounded-full"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <i class="fa fa-heart text-gold text-4xl animate-pulse"></i>
+      </div>
+    </div>
+
+    <h1 class="font-elegant text-[clamp(2.5rem,8vw,5rem)] font-bold text-white leading-tight mb-4 text-shadow-gold">
+      Happy Birthday! Sun!
+    </h1>
+
+    <div class="flex items-center justify-center my-6">
+      <div class="w-16 h-px bg-gold/70"></div>
+      <p class="font-modern text-gold-light italic mx-4 text-[clamp(1rem,3vw,1.25rem)]">
+        愿这一天如你一般美好
+      </p>
+      <div class="w-16 h-px bg-gold/70"></div>
+    </div>
+
+    <div class="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+  </header>
+
+  <!-- 祝福文字区域 -->
+  <section class="max-w-3xl mx-auto mb-20 scroll-reveal">
+    <div class="ribbon inline-block text-center font-elegant text-lg">
+      <i class="fa fa-star mr-2"></i>浩的祝福<i class="fa fa-star ml-2"></i>
+    </div>
+
+    <div class="space-y-8 text-lg leading-relaxed">
+      <p class="font-elegant text-[clamp(1.1rem,3vw,1.5rem)] text-gold-light first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left">
+        孙，又一年的今天，时光仿佛为你而停驻。 <br>每一次与你相伴的日子，都像是生命中最珍贵的礼物。
+      </p>
+
+      <p class="font-modern pl-8 border-l-2 border-gold/30 italic">
+        你的笑容，是我每天醒来的动力；你的温柔，是我疲惫时的港湾。<br>认识你，是我此生最大的幸运。
+      </p>
+
+      <p class="font-elegant text-right text-[clamp(1.1rem,3vw,1.5rem)] text-gold-light">
+        在这个特别的日子里，我想告诉你：<br>--你是我生命中最美的风景，是我想要共度一生的人。
+      </p>
+
+      <div class="ornament-border text-center my-10">
+        <p class="font-elegant text-gold text-xl">愿你永远被温柔以待</p>
+      </div>
+
+      <p class="font-modern">
+        愿你的每一个梦想都能绽放，愿你的每一天都充满阳光。无论未来有多少挑战，我都会紧紧握着你的手，陪你一起面对。
+      </p>
+    </div>
+  </section>
+
+  <!-- 礼物区域 -->
+  <section class="max-w-4xl mx-auto mb-20 scroll-reveal">
+    <h2 class="font-elegant text-3xl text-center mb-12 text-gold">
+      <i class="fa fa-gift mr-3"></i>为你准备的惊喜<i class="fa fa-gift ml-3"></i>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- 礼物1 -->
+      <div class="gift-container group">
+        <div class="gift-box bg-dark-gray rounded-lg p-8 border border-gold/30 flex flex-col items-center cursor-pointer hover:border-gold relative overflow-hidden">
+          <div class="absolute inset-0 bg-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <!-- 礼物盒装饰 -->
+          <div class="w-16 h-1 bg-gold absolute top-1/2 left-0"></div>
+          <div class="w-1 h-16 bg-gold absolute top-0 left-1/2"></div>
+
+          <div class="relative z-10 text-center p-6">
+            <i class="fa fa-diamond text-5xl text-gold mb-4"></i>
+            <h3 class="font-elegant text-xl mb-2">PRESENT A</h3>
+            <p class="font-modern text-gray-300 text-sm">点击揭晓这份惊喜</p>
+          </div>
+        </div>
+
+        <!-- 礼物内容 (默认隐藏) -->
+        <div class="gift-content hidden mt-4 bg-medium-gray p-6 rounded-lg border border-gold/20">
+          <h4 class="font-elegant text-gold text-xl mb-3">定制项链</h4>
+          <p class="font-modern">一条刻有我们相遇日期的项链，愿它如同我对你的爱，永远陪伴在你身边。</p>
+          <div class="mt-4 w-full h-48 bg-dark-gray rounded overflow-hidden flex items-center justify-center">
+            <img src="https://picsum.photos/id/152/400/300" alt="一条精美的项链，带有小巧的吊坠" class="max-h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- 礼物2 -->
+      <div class="gift-container group">
+        <div class="gift-box bg-dark-gray rounded-lg p-8 border border-gold/30 flex flex-col items-center cursor-pointer hover:border-gold relative overflow-hidden">
+          <div class="absolute inset-0 bg-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <!-- 礼物盒装饰 -->
+          <div class="w-16 h-1 bg-gold absolute top-1/2 left-0"></div>
+          <div class="w-1 h-16 bg-gold absolute top-0 left-1/2"></div>
+
+          <div class="relative z-10 text-center p-6">
+            <i class="fa fa-plane text-5xl text-gold mb-4"></i>
+            <h3 class="font-elegant text-xl mb-2">PRESENT B</h3>
+            <p class="font-modern text-gray-300 text-sm">点击揭晓这份惊喜</p>
+          </div>
+        </div>
+
+        <!-- 礼物内容 (默认隐藏) -->
+        <div class="gift-content hidden mt-4 bg-medium-gray p-6 rounded-lg border border-gold/20">
+          <h4 class="font-elegant text-gold text-xl mb-3">周末 getaway</h4>
+          <p class="font-modern">为你安排了一个浪漫的周末旅行，远离城市喧嚣，只属于我们两人的甜蜜时光。</p>
+          <div class="mt-4 w-full h-48 bg-dark-gray rounded overflow-hidden flex items-center justify-center">
+            <img src="https://picsum.photos/id/1031/400/300" alt="风景优美的度假小屋，周围环绕着自然景观" class="max-h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 回忆与未来区域 -->
+  <section class="max-w-4xl mx-auto mb-20 scroll-reveal">
+    <h2 class="font-elegant text-3xl text-center mb-12 text-gold">
+      <i class="fa fa-clock-o mr-3"></i>我们的故事<i class="fa fa-clock-o ml-3"></i>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+          <i class="fa fa-heart text-gold text-xl"></i>
+        </div>
+        <h3 class="font-elegant text-xl text-gold mb-3">我们的相遇</h3>
+        <p class="font-modern text-gray-300">还记得我们第一次见面的场景吗？你的笑容点亮了整个房间，从那一刻起，我就知道你是特别的。</p>
+      </div>
+
+      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+          <i class="fa fa-calendar text-gold text-xl"></i>
+        </div>
+        <h3 class="font-elegant text-xl text-gold mb-3">共同的时光</h3>
+        <p class="font-modern text-gray-300">一起经历的点点滴滴，无论是欢笑还是泪水，都已成为我生命中最珍贵的记忆，永远珍藏心底。</p>
+      </div>
+
+      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+          <i class="fa fa-star text-gold text-xl"></i>
+        </div>
+        <h3 class="font-elegant text-xl text-gold mb-3">未来的约定</h3>
+        <p class="font-modern text-gray-300">还有无数个日出日落等待我们一起见证，无数个梦想等待我们一起实现，我爱你，不止今天。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 倒计时和签名区域 -->
+  <section class="max-w-3xl mx-auto text-center scroll-reveal">
+    <div class="ornament-border text-center my-10">
+      <p class="font-elegant text-gold text-xl">爱你的每一天</p>
+    </div>
+
+    <div class="font-elegant text-2xl md:text-4xl text-gold-light mb-8">
+      期待与你共度下一个365天
+    </div>
+
+    <div class="mt-16 font-elegant text-right pr-8">
+      <p class="text-gold text-xl">永远爱你的，</p>
+      <p class="text-white text-2xl mt-2">浩</p>
+      <div class="w-32 h-px bg-gold/50 mt-4 ml-auto"></div>
+    </div>
+  </section>
+</div>
+
+<!-- 页脚装饰 -->
+<footer class="mt-20 py-8 border-t border-gold/30 bg-darker relative z-10">
+  <div class="container mx-auto px-4 text-center">
+    <p class="font-modern text-gray-400 text-sm">
+      <i class="fa fa-heart text-gold mr-1"></i> 用爱制作 <i class="fa fa-heart text-gold ml-1"></i>
+    </p>
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent mt-4"></div>
+  </div>
+</footer>
+
+<script>
+  // 礼物点击显示功能
+  document.querySelectorAll('.gift-box').forEach(box => {
+    box.addEventListener('click', function() {
+      const content = this.parentElement.querySelector('.gift-content');
+      content.classList.toggle('hidden');
+
+      // 添加显示动画
+      if (!content.classList.contains('hidden')) {
+        content.style.opacity = '0';
+        content.style.transform = 'translateY(20px)';
+        content.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+        setTimeout(() => {
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+        }, 10);
+      }
+    });
+  });
+
+  // 滚动显示动画
+  function checkScroll() {
+    const elements = document.querySelectorAll('.scroll-reveal');
+
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop < window.innerHeight - elementVisible) {
+        element.classList.add('active');
+      }
+    });
+  }
+
+  // 页面加载和滚动时检查
+  window.addEventListener('load', checkScroll);
+  window.addEventListener('scroll', checkScroll);
+
+  // 旋转动画
+  document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                @keyframes spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+            </style>
+        `);
+</script>
+</body>
+</html>
