@@ -220,36 +220,98 @@
 
   <!-- 回忆与未来区域 -->
   <section class="max-w-4xl mx-auto mb-20 scroll-reveal">
-    <h2 class="font-elegant text-3xl text-center mb-12 text-gold">
+    <h2 class="font-elegant text-3xl text-center mb-12 text-gold relative inline-block mx-auto">
       <i class="fa fa-clock-o mr-3"></i>我们的故事<i class="fa fa-clock-o ml-3"></i>
+      <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
-        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
-          <i class="fa fa-heart text-gold text-xl"></i>
+    <div class="space-y-10 relative">
+      <!-- 时间线装饰 -->
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gold/30 transform md:-translate-x-1/2"></div>
+
+      <!-- 故事1 -->
+      <div class="relative flex flex-col md:flex-row items-start gap-6">
+        <!-- 时间点标记 -->
+        <div class="z-10 w-12 h-12 rounded-full bg-dark border-2 border-gold flex items-center justify-center flex-shrink-0 transform md:-translate-x-1/2">
+          <i class="fa fa-heart text-gold"></i>
         </div>
-        <h3 class="font-elegant text-xl text-gold mb-3">我们的相遇</h3>
-        <p class="font-modern text-gray-300">还记得我们第一次见面的场景吗？你的笑容点亮了整个房间，从那一刻起，我就知道你是特别的。</p>
+
+        <!-- 时间标签 -->
+        <div class="hidden md:block absolute left-1/2 top-3 transform -translate-x-1/2 -translate-y-full px-4 py-1 bg-medium-gray text-gold text-sm rounded-full">
+          初识时光
+        </div>
+
+        <!-- 内容卡片 -->
+        <div class="bg-dark-gray p-6 md:p-8 rounded-lg border border-gold/20 hover:border-gold transition-all duration-300 w-full md:ml-6 md:max-w-md md:mr-auto hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+          <h3 class="font-elegant text-xl text-gold mb-4 flex items-center">
+            <span class="md:hidden mr-2 text-sm bg-gold/20 px-2 py-0.5 rounded">初识</span>
+            第一次为你准备的礼物
+          </h3>
+          <p class="font-modern text-gray-300 leading-relaxed">
+            还记得我第一次为你准备的生日礼物吗？那一段时间的我非常喜欢向日葵，向日葵面向阳光，就算外界是阴霾遮天，内心也有着属于自己的春暖花开，当时向日葵放在我自己亲手做的小盒子里，上面写满了我真心的祝福，也许那个时候我已经对孙有感觉了呢？哦对了，那是孙的17岁
+          </p>
+
+          <!-- 底部装饰线 -->
+          <div class="mt-5 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+        </div>
       </div>
 
-      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
-        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
-          <i class="fa fa-calendar text-gold text-xl"></i>
+      <!-- 故事2 -->
+      <div class="relative flex flex-col md:flex-row items-start gap-6">
+        <!-- 时间点标记 -->
+        <div class="z-10 w-12 h-12 rounded-full bg-dark border-2 border-gold flex items-center justify-center flex-shrink-0 transform md:-translate-x-1/2">
+          <i class="fa fa-calendar text-gold"></i>
         </div>
-        <h3 class="font-elegant text-xl text-gold mb-3">共同的时光</h3>
-        <p class="font-modern text-gray-300">一起经历的点点滴滴，无论是欢笑还是泪水，都已成为我生命中最珍贵的记忆，永远珍藏心底。</p>
+
+        <!-- 时间标签 -->
+        <div class="hidden md:block absolute left-1/2 top-3 transform -translate-x-1/2 -translate-y-full px-4 py-1 bg-medium-gray text-gold text-sm rounded-full">
+          共同成长
+        </div>
+
+        <!-- 内容卡片 -->
+        <div class="bg-dark-gray p-6 md:p-8 rounded-lg border border-gold/20 hover:border-gold transition-all duration-300 w-full md:ml-auto md:mr-6 md:max-w-md hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+          <h3 class="font-elegant text-xl text-gold mb-4 flex items-center">
+            <span class="md:hidden mr-2 text-sm bg-gold/20 px-2 py-0.5 rounded">成长</span>
+            承上启下的人生两年
+          </h3>
+          <p class="font-modern text-gray-300 leading-relaxed">
+            高三和大一，人生当中最割裂的两年，在这两年当中，我们一直在一起，高压的高三环境之下，每天看到孙的笑脸就可以驱散一天的不愉快和劳累，孙不时的小巧思或者是小手工总是能让我当作宝贝收藏好久，有时当我看到孙苦于各种复杂的关系的时候我也感受到压抑，希望多帮你排解一些烦恼，讲题我总是来者不拒，售后服务也做的非常到位~
+          </p>
+
+          <!-- 底部装饰线 -->
+          <div class="mt-5 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+        </div>
       </div>
 
-      <div class="bg-dark-gray p-6 rounded-lg border border-gold/20 hover:border-gold transition-colors duration-300">
-        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
-          <i class="fa fa-star text-gold text-xl"></i>
+      <!-- 故事3 -->
+      <div class="relative flex flex-col md:flex-row items-start gap-6">
+        <!-- 时间点标记 -->
+        <div class="z-10 w-12 h-12 rounded-full bg-dark border-2 border-gold flex items-center justify-center flex-shrink-0 transform md:-translate-x-1/2">
+          <i class="fa fa-star text-gold"></i>
         </div>
-        <h3 class="font-elegant text-xl text-gold mb-3">未来的约定</h3>
-        <p class="font-modern text-gray-300">还有无数个日出日落等待我们一起见证，无数个梦想等待我们一起实现，我爱你，不止今天。</p>
+
+        <!-- 时间标签 -->
+        <div class="hidden md:block absolute left-1/2 top-3 transform -translate-x-1/2 -translate-y-full px-4 py-1 bg-medium-gray text-gold text-sm rounded-full">
+          未来可期
+        </div>
+
+        <!-- 内容卡片 -->
+        <div class="bg-dark-gray p-6 md:p-8 rounded-lg border border-gold/20 hover:border-gold transition-all duration-300 w-full md:ml-6 md:max-w-md md:mr-auto hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+          <h3 class="font-elegant text-xl text-gold mb-4 flex items-center">
+            <span class="md:hidden mr-2 text-sm bg-gold/20 px-2 py-0.5 rounded">未来</span>
+            我们的大学生活
+          </h3>
+          <p class="font-modern text-gray-300 leading-relaxed">
+            还有无数个日出日落等待我们一起见证，无论我们当下的大学生活是轻松还是劳累（当然偏后者...），我总愿意无时无刻的准备着，准备着为孙提供一切我能够做到的帮助，大学这几年我一直都会想办法为孙制造各种小惊喜，为奔波的大学生活增添一些小确幸
+          </p>
+
+          <!-- 底部装饰线 -->
+          <div class="mt-5 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- 倒计时和签名区域 -->
   <section class="max-w-3xl mx-auto text-center scroll-reveal">
